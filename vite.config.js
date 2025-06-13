@@ -1,18 +1,13 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
     plugins: [
         laravel({
-            input: [
-                'resources/css/app.css', // Tu archivo CSS principal de la aplicación
-                'resources/css/filament-tailwind3.css', // El archivo CSS específico de Filament/Tailwind 3
-                'resources/js/app.js', // Tu archivo JS principal
-            ],
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
+        tailwindcss(),
     ],
-    // Hemos eliminado la sección 'css.postcss' de aquí.
-    // Vite detectará automáticamente tu postcss.config.js y aplicará esos plugins.
 });
-
