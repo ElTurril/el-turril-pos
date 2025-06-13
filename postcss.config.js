@@ -5,9 +5,9 @@ import postcssImport from 'postcss-import';
 
 export default {
   plugins: [
-    // postcss-import debe ser el primer plugin.
+    // ¡postcss-import debe ser el primer plugin para resolver las importaciones de CSS!
     postcssImport,
-    // Luego, Tailwind CSS, apuntando a tu configuración específica.
+    // Luego, Tailwind CSS.
     tailwindcss('./tailwind3.config.js'),
     // Finalmente, Autoprefixer.
     autoprefixer,
