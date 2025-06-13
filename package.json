@@ -4,8 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
-        "build:filament": "npx tailwindcss -c tailwind3.config.js -i ./resources/css/filament-tailwind3.css -o public/css/filament-tailwind3.css --minify"
+        "dev": "vite"
     },
     "devDependencies": {
         "axios": "^1.8.2",
