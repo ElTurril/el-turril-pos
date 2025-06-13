@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import tailwindcss from 'tailwindcss'; // Asegúrate de importar tailwindcss
 
 export default defineConfig({
     plugins: [
@@ -13,16 +12,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    // Esta sección asegura que PostCSS (y por lo tanto Tailwind CSS)
-    // procese tus archivos CSS con la configuración correcta.
-    css: {
-        postcss: {
-            plugins: [
-                // Aquí le decimos a Tailwind CSS que use tu archivo de configuración específico.
-                tailwindcss('./tailwind3.config.js'),
-                require('autoprefixer'), // Para prefijos de navegador automáticamente
-            ],
-        },
-    },
+    // Hemos eliminado la sección 'css.postcss' de aquí.
+    // Vite detectará automáticamente tu postcss.config.js y aplicará esos plugins.
 });
 
